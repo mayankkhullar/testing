@@ -1,11 +1,12 @@
+import java.util.*;
+
 class producerconsumer{
+	Queue q1 = new LinkedList();
+	
+	
 	synchronized void produce(boolean running)
 			{
-		if(!running)
-		{
-			notify();
-			return;
-		}
+		
 		System.out.println("producing");
 		notify();    //consuming run
 		System.out.println("consuming");
@@ -13,25 +14,21 @@ class producerconsumer{
 			wait();
 		}catch(InterruptedException ixc){
 		System.out.print("caught" + ixc);
-		}
+		q1.add("1");
+		}}
 		
-			}
 			
 	synchronized void consume(boolean running)
 		{
-			if(!running)
-			{notify();
-			return;
-			}System.out.println("consuming");
-			notify(); //producing run
 			System.out.println("producing");
+			notify(); //producing run
+			System.out.println("consuming");
 			try{wait();
-			}catch(InterruptedException ixc){
-				System.out.println("caught" + ixc);}
 			}
-		}
-
-
+			catch(InterruptedException ixc){
+		     System.out.println("caught" + ixc);}
+			q1.remove("1");}
+         }
 
 public class multithreading implements Runnable {
 	Thread t1;
@@ -65,3 +62,4 @@ public class multithreading implements Runnable {
 			}
 
 }
+
