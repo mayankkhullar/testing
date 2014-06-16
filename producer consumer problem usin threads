@@ -1,0 +1,67 @@
+class producerconsumer{
+	synchronized void produce(boolean running)
+			{
+		if(!running)
+		{
+			notify();
+			return;
+		}
+		System.out.println("producing");
+		notify();    //consuming run
+		System.out.println("consuming");
+		try{
+			wait();
+		}catch(InterruptedException ixc){
+		System.out.print("caught" + ixc);
+		}
+		
+			}
+			
+	synchronized void consume(boolean running)
+		{
+			if(!running)
+			{notify();
+			return;
+			}System.out.println("consuming");
+			notify(); //producing run
+			System.out.println("producing");
+			try{wait();
+			}catch(InterruptedException ixc){
+				System.out.println("caught" + ixc);}
+			}
+		}
+
+
+
+public class multithreading implements Runnable {
+	Thread t1;
+	producerconsumer pc2;
+	multithreading(String name ,producerconsumer pc )
+	{
+	t1 = new Thread(this,name)	;
+	pc2 = pc;
+	t1.start();
+	}
+			public void run()
+				{
+		if(t1.getName().compareTo("produce")== 0)
+		{for (int i=0;i<5;i++){
+			pc2.produce(true);
+			pc2.produce(false);}
+		}
+		else{pc2.consume(true);}
+				}
+			public static void main(String[] args)
+			{
+				producerconsumer pc = new producerconsumer();
+				multithreading mt1 = new multithreading("produce",pc);
+				multithreading mt2 = new multithreading("consume",pc);
+                try{
+				mt1.t1.join();
+                mt2.t1.join();
+                }catch(InterruptedException e){
+                	System.out.println("expection caught" + e);
+                }
+			}
+
+}
