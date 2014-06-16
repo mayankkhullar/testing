@@ -1,65 +1,119 @@
 import java.util.*;
-
-class producerconsumer{
-	Queue q1 = new LinkedList();
-	
-	
-	synchronized void produce(boolean running)
-			{
-		
-		System.out.println("producing");
-		notify();    //consuming run
-		System.out.println("consuming");
-		try{
-			wait();
-		}catch(InterruptedException ixc){
-		System.out.print("caught" + ixc);
-		q1.add("1");
-		}}
-		
-			
-	synchronized void consume(boolean running)
-		{
-			System.out.println("producing");
-			notify(); //producing run
-			System.out.println("consuming");
-			try{wait();
-			}
-			catch(InterruptedException ixc){
-		     System.out.println("caught" + ixc);}
-			q1.remove("1");}
-         }
-
-public class multithreading implements Runnable {
-	Thread t1;
-	producerconsumer pc2;
-	multithreading(String name ,producerconsumer pc )
-	{
-	t1 = new Thread(this,name)	;
-	pc2 = pc;
-	t1.start();
-	}
-			public void run()
+class item{
+	private int contents;
+	private boolean available = false;
+		public synchronized int get()
 				{
-		if(t1.getName().compareTo("produce")== 0)
-		{for (int i=0;i<5;i++){
-			pc2.produce(true);
-			pc2.produce(false);}
-		}
-		else{pc2.consume(true);}
-				}
-			public static void main(String[] args)
+			while (available ==false)
 			{
-				producerconsumer pc = new producerconsumer();
-				multithreading mt1 = new multithreading("produce",pc);
-				multithreading mt2 = new multithreading("consume",pc);
-                try{
-				mt1.t1.join();
-                mt2.t1.join();
-                }catch(InterruptedException e){
-                	System.out.println("expection caught" + e);
-                }
-			}
-
+				try{
+					wait();
+					
+				}catch(InterruptedException ixc){
+					System.out.print("caught" + ixc);
+				}
+			}available = false;
+			notifyAll();
+			
+			return contents ;
+				}
+		 public synchronized void produces(int value)
+		   {
+ 	            while (available ==true)
+	{
+		try{ 
+			    wait();
+			
+		    }catch(InterruptedException ixc){
+			   
+			System.out.print("caught" + ixc);
+	}
+	}
+ 	 
+	            contents = value;
+	            available = true;
+	            notifyAll();
+			
+		   }
+	
 }
 
+class producer extends Thread
+{
+	private item item1;
+	private int number;
+public producer(item i , int number){
+	item1 = i;
+	this.number = number;
+	
+}
+
+	public  void run()
+		{for(int i=0; i<5;i++)
+		{
+			item1.produces(i);
+		System.out.println("producer\t" + this.number + "\t"     +  "produces\t" + i);
+		try{
+			sleep(5);
+		}catch(InterruptedException e){
+			System.out.println("caught" + e);
+		}
+		
+		}
+		}
+	
+}                              
+class consumer extends Thread                   // consumer class
+{
+	private item item1;
+	private int number;
+	consumer(item i ,int number )
+	{
+		item1 = i;
+		this.number = number;
+		
+	}
+	public void run()
+	{
+		int value = 0;
+		for(int i = 0; i<5; i++){
+			value = item1.get();
+			System.out.println("consumer\t" + this.number+"\t" +  "delivers\t" + value);
+			try{
+				sleep(100);
+			}catch(InterruptedException e){
+				System.out.println("caught" + e);
+			}
+			
+			}
+		}
+	}
+
+// main 
+//  class 
+//starts
+public class mainThreads {
+	public static void main(String[] args)
+	{
+		item item1 = new item();
+		
+		producer p1 = new producer(item1,1);
+		producer p2 = new producer(item1,2);
+		producer p3 = new producer(item1,3);
+		producer p4 = new producer(item1,4);
+		
+		consumer c1 = new consumer(item1,1);
+		consumer c2 = new consumer(item1,2);
+		consumer c3 = new consumer(item1,3);
+		consumer c4 = new consumer(item1,4);
+		p1.start();
+		p2.start();
+		p3.start();
+		p4.start();
+			c1.start();
+			c2.start();
+			c3.start();
+			c4.start();
+	
+	}
+}
