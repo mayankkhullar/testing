@@ -1,3 +1,4 @@
+//first create (table employee and insert id firstname lastname age) in schema here in this case is (mayank) and then create getter and setter for elements of table in employee.java and then run this
 package foo;
 import java.sql.*;
 import java.io.IOException;
