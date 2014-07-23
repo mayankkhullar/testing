@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry including="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/cglib-2.1_3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/commons-logging-1.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.aopalliance_1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.apache.commons.collections_3.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.aspectj.aspectjrt_1.6.0.v200808071200.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.aspectj.aspectjweaver_1.6.0.v200805211800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.objectweb.asm_2.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.binding_2.0.4.v200809171600.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.bundle.osgi.core_1.1.0.v200807062000.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.bundle.osgi.doc_1.0.0.v200801251000.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.bundle.osgi.extender_1.1.0.v200807062000.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.bundle.osgi.io_1.1.0.v200807602000.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.bundle.spring.doc_2.5.6.v200807062000.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.bundle.spring.webmvc_2.5.6.v200808081800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.bundle.spring_2.5.6.v200808081800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.faces_2.0.4.v200809171600.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.ajdt.source_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.ajdt.ui.visualiser_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.ajdt.ui.xref_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.aop.core_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.aop.mylyn_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.aop.source_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.aop.ui.matcher_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.aop.ui_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.autowire.source_2.0.5.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.beans.core.autowire_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.beans.core_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.beans.mylyn_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.beans.osgibridge_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.beans.ui.editor_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.beans.ui.graph_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.beans.ui.refactoring_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.beans.ui.search_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.beans.ui_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.core_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.doc_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.javaconfig.core_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.javaconfig.source_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.javaconfig.ui_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.mylyn.source_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.mylyn_2.0.6.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.osgi.source_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.osgi.targetdefinition_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.osgi_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.security.source_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.security_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.source_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.ui_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.webflow.core_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.webflow.mylyn_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.webflow.source_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.webflow.ui.editor_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.webflow.ui.graph_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse.webflow.ui_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.ide.eclipse_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.javaconfig_1.0.0.m3_v200707150600.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.js_2.0.4.v200809171600.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.osgi.backport.util.concurrent_3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.osgi.source_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.security.annotation_2.0.5.v200809181800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.security.core_2.0.5.v200809181800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.source_2.2.0.v200809261800.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.webflow.doc_1.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/.m2/repository/org/plugins/org.springframework.webflow_2.0.4.v200809171600.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/Documents/workspace-sts-3.2.0.RELEASE/testjsp/WebContent/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mayank/Documents/workspace-sts-3.2.0.RELEASE/testjsp/WebContent/WEB-INF/lib/mysql-connector-java-3.1.14-bin.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
