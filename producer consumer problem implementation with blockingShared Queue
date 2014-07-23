@@ -1,0 +1,123 @@
+import java.util.concurrent.*;
+import java.util.*;
+class item{
+	 BlockingQueue sharedQueue;
+	private int contents;
+	private boolean available = false;
+		public synchronized int get()
+				{
+			while (available ==false)
+			{
+				try{
+					wait();
+
+				}catch(InterruptedException ixc){
+					System.out.print("caught" + ixc);
+				}
+			}available = false;
+			notifyAll();
+
+			return contents ;
+				}
+		 public synchronized void produces(int value)
+		   {
+ 	            while (available ==true)
+	{
+		try{ 
+			    wait();
+
+		    }catch(InterruptedException ixc){
+
+			System.out.print("caught" + ixc);
+	}
+	}
+ 	 
+	            contents = value;
+	            available = true;
+	            notifyAll();
+
+		   }
+
+}
+
+class producer extends Thread
+{ BlockingQueue sharedQueue;
+	private item item1;
+	private int number;
+public producer(item i , int number,BlockingQueue sharedQueue){
+	item1 = i;
+	this.sharedQueue = sharedQueue;
+	this.number = number;
+
+}
+
+	public  void run()
+		{for(int i=0; i<5;i++)
+		{
+			item1.produces(i);
+			
+		System.out.println("producer\t" + this.number + "\t"     +  "produces\t" + i);
+		try{sharedQueue.put(i);
+			sleep(5);
+		}catch(InterruptedException e){
+			System.out.println("caught" + e);
+		}
+
+		}
+		}
+
+}                              
+class consumer extends Thread                   // consumer class
+{ BlockingQueue sharedQueue;
+	private item item1;
+	private int number;
+	consumer(item i ,int number ,BlockingQueue sharedQueue)
+	{this.sharedQueue = sharedQueue;
+		item1 = i;
+		this.number = number;
+
+	}
+	public void run()
+	{
+		int value = 0;
+		for(int i = 0; i<5; i++){
+			value = item1.get();
+			System.out.println("consumer\t" + this.number+"\t" +  "delivers\t" + value);
+			try{sharedQueue.take();
+				sleep(100);
+			}catch(InterruptedException e){
+				System.out.println("caught" + e);
+			}
+
+			}
+		}
+	}
+
+// main 
+//  class 
+//starts
+public class mainThreads {
+	public static void main(String[] args)
+	{BlockingQueue sharedQueue = new LinkedBlockingQueue();
+		item item1 = new item();
+
+		producer p1 = new producer(item1,1,sharedQueue);
+		producer p2 = new producer(item1,2,sharedQueue);
+		producer p3 = new producer(item1,3,sharedQueue);
+		producer p4 = new producer(item1,4,sharedQueue);
+
+		consumer c1 = new consumer(item1,1,sharedQueue);
+		consumer c2 = new consumer(item1,2,sharedQueue);
+		consumer c3 = new consumer(item1,3,sharedQueue);
+		consumer c4 = new consumer(item1,4,sharedQueue);
+		p1.start();
+		p2.start();
+		p3.start();
+		p4.start();
+			c1.start();
+			c2.start();
+			c3.start();
+			c4.start();
+
+	}
+}
